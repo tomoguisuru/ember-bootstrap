@@ -3,7 +3,7 @@
 {{#bs-alert modifiers="warning"}}WARNING!!!{{/bs-alert}}
 {{#bs-alert modifiers="danger"}}DANGER, Will Robinson!{{/bs-alert}}
 
-{{#bs-alert modifiers="danger" as |alert|}}
+{{#bs-alert modifiers="warning" as |alert|}}
   <h4 class="alert-heading">
     Warning!!!
   </h4>
@@ -16,4 +16,20 @@
     {{#alert.link href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"}}DO NOT CLICK{{/alert.link}}
   </p>
 
+{{/bs-alert}}
+
+{{#bs-alert modifiers="info" as |alert|}}
+  {{#alert.header}}
+    Callback Enabled
+  {{/alert.header}}
+
+  <p>
+    Be sure to claim your prize below!
+  </p>
+
+  <hr>
+
+  <p>
+    {{#alert.link onClick=(action "show_alert" "WINNER!!!")}}Claim Your Prize{{/alert.link}}
+  </p>
 {{/bs-alert}}

@@ -9,7 +9,8 @@ const AlertComponent = Component.extend(BaseMixin, {
   role: 'alert',
   base: 'alert',
 
-  linkComponent: 'bs-alert/alert-link',
+  headerComponent: 'bs-alert/alert-header',
+  linkComponent:   'bs-alert/alert-link',
 });
 
 export default AlertComponent;
