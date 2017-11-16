@@ -2,3 +2,18 @@
 {{#bs-alert modifiers="info"}}This is some info{{/bs-alert}}
 {{#bs-alert modifiers="warning"}}WARNING!!!{{/bs-alert}}
 {{#bs-alert modifiers="danger"}}DANGER, Will Robinson!{{/bs-alert}}
+
+{{#bs-alert modifiers="danger" as |alert|}}
+  <h4 class="alert-heading">
+    Warning!!!
+  </h4>
+
+  <p>
+    Clicking on the following link could be hazardous to your health!
+
+    <br>
+
+    {{#alert.link href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"}}DO NOT CLICK{{/alert.link}}
+  </p>
+
+{{/bs-alert}}
